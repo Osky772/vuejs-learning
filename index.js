@@ -1,13 +1,20 @@
 new Vue({
     el: "#app",
     data: {
-        name: "Oskar",
-        website: "https://google.com",
-        websiteTag: `<a href="https://google.com">My new link</a>`
+        count: 0,
+        x: 0,
+        y: 0
     },
     methods: {
-        greet() {
-            return `Hello ${this.name}`
+        increase(value) {
+            this.count += value
+        },
+        decrease(value) {
+            this.count -= value
+        },
+        updateXY(event) {
+            this.x = event.offsetX;
+            this.y = event.offsetY;
         }
     }
 })

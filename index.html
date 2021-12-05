@@ -10,11 +10,16 @@
 </head>
 <body>
     <div id="app">
-        <h1>{{ greet() }}</h1>
-        <a v-bind:href="website">Go to website</a>
-        <input type="text" :value="name">
-        <p>My name: {{name}}</p>
-        <p v-html="websiteTag"></p>
+        <h1>Counter</h1>
+        <button @click="increase(1)">Increase</button>
+        <button @click="decrease(1)">Decrease</button>
+
+        <button @dblclick="increase(10)">Increase by 10</button>
+        <button @dblclick="decrease(10)">Decrease by 10</button>
+
+        <p>Total count: {{count}}</p>
+
+        <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
     </div>
     
     <script src="./index.js"></script>
