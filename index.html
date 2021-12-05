@@ -11,6 +11,10 @@
 <body>
     <div id="app">
         <h1>{{ greet() }}</h1>
+        <a v-bind:href="website">Go to website</a>
+        <input type="text" :value="name">
+        <p>My name: {{name}}</p>
+        <p v-html="websiteTag"></p>
     </div>
     
     <script src="./index.js"></script>
