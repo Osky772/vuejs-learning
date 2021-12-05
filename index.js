@@ -3,7 +3,8 @@ new Vue({
     data: {
         count: 0,
         x: 0,
-        y: 0
+        y: 0,
+        name: "Oskar"
     },
     methods: {
         increase(value) {
@@ -15,6 +16,9 @@ new Vue({
         updateXY(event) {
             this.x = event.offsetX;
             this.y = event.offsetY;
+        },
+        onChange() {
+            console.log("heeey")
         }
     }
 })

@@ -10,16 +10,11 @@
 </head>
 <body>
     <div id="app">
-        <h1>Counter</h1>
-        <button @click="increase(1)">Increase</button>
-        <button @click="decrease(1)">Decrease</button>
-
-        <button @dblclick="increase(10)">Increase by 10</button>
-        <button @dblclick="decrease(10)">Decrease by 10</button>
-
-        <p>Total count: {{count}}</p>
-
-        <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
+        <h1>Events</h1>
+        
+        <input type="text" v-on:input.change="onChange">
+        <input type="text" v-model="name">
+        <p>My name: {{ name }}</p>
     </div>
     
     <script src="./index.js"></script>
